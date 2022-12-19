@@ -67,6 +67,7 @@ void main()
 	print(vec);
 	vec.push_back(123);
 	print(vec);
+	
 	/*
 	capacity - size = количество элементов, которые могут быть добавлены в вектор без переопределения памяти.
 	если при добавлении элемента capacity == size, то требуется переопределение памяти,
@@ -86,7 +87,7 @@ void main()
 
 	try
 	{
-		for (int i = 0; i < vec.capacity(); i++)
+		for (int i = 0; i < vec.capacity(); i++) 
 		{
 			//cout << vec[i] << tab;
 			cout << vec.at(i) << tab;
