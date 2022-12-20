@@ -1,6 +1,8 @@
 #include<iostream>
 #include<array>
 #include<vector>
+#include<list>
+#include<algorithm>
 //using namespace std;
 using std::cin;
 using std::cout;
@@ -31,7 +33,7 @@ template<typename T>void print(const std::vector<T>& vec);
 
 //#define STL_ARRAY
 //#define MY_EXCEPTION
-#define STL_VECTOR
+//#define STL_VECTOR
 
 void main()
 {
@@ -124,8 +126,22 @@ void main()
 	vec.insert(vec.begin() + index, number, value);
 	print(vec);
 
-#endif // STL_VECTOR
+	do
+	{
+		cout << "¬ведите индекс удал€емого элемента"; cin >> index;
+		if (index >= vec.size())cout << "Out of range" << endl;
+	} while (index>=vec.size());
+	vec.erase(vec.begin()+index,vec.begin()+index+number);
 
+#endif // STL_VECTOR
+	std::list<int>list = { 3,5,8,13,21,34,55,69 };
+	for (int i : list)cout << i << tab; cout << endl;
+	int value;
+	int index;
+	cout << "¬ведите индекс добавл€емых значений: "; cin >> index;
+	cout << "¬ведите значение добавл€емого элемента: "; cin >> value;
+	std::list<int>::iterator position = list.begin();
+	std::advance
 }
 template<typename T>void print(const std::vector<T>& vec)
 {
