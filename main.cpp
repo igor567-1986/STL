@@ -141,7 +141,9 @@ void main()
 	cout << "¬ведите индекс добавл€емых значений: "; cin >> index;
 	cout << "¬ведите значение добавл€емого элемента: "; cin >> value;
 	std::list<int>::iterator position = list.begin();
-	std::advance
+	std::advance(position, index);
+	list.insert(position, value);
+	for (int i : list)cout << i << tab; cout << endl;
 }
 template<typename T>void print(const std::vector<T>& vec)
 {
